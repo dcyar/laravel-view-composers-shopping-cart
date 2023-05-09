@@ -12,15 +12,12 @@ class DashboardController extends Controller
     public function index()
     {
         return view('dashboard', [
-            'shopping_cart' => ShoppingCart::with('details.product')->whereUserId(Auth::id())->first(),
             'products' => Product::all()
         ]);
     }
 
     public function contact()
     {
-        return view('contact', [
-            'shopping_cart' => ShoppingCart::with('details.product')->whereUserId(Auth::id())->first(),
-        ]);
+        return view('contact');
     }
 }

@@ -8,7 +8,7 @@ use Illuminate\View\View;
 
 class AppLayout extends Component
 {
-    public function __construct(public ShoppingCart $shoppingCart){}
+    public function __construct(){}
 
     /**
      * Get the view / contents that represents the component.
