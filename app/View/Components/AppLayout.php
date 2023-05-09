@@ -2,11 +2,14 @@
 
 namespace App\View\Components;
 
+use App\Models\ShoppingCart;
 use Illuminate\View\Component;
 use Illuminate\View\View;
 
 class AppLayout extends Component
 {
+    public function __construct(public ShoppingCart $shoppingCart){}
+
     /**
      * Get the view / contents that represents the component.
      */
